@@ -1,0 +1,38 @@
+{
+  "consumer": {
+    "name": "client"
+  },
+  "provider": {
+    "name": "userservice"
+  },
+  "interactions": [
+    {
+      "providerState": "provider accepts a new person",
+      "request": {
+        "method": "POST",
+        "path": "/add-user",
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "firstName": "Barak",
+          "lastName": "Obama"
+        }
+      },
+      "response": {
+        "status": 201,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "body":{
+          "id": 100
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
